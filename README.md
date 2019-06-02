@@ -1,4 +1,4 @@
-# Jogo-Da-Velha
+# Informações do jogo
 Nova ( e última ) versão do jogo.
 
 Você tem 2 opções de jogo.
