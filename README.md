@@ -11,5 +11,7 @@ Você tem 2 opções de jogo.
 
 # Executar o jogo
 python jogo-da-velha-base.py
-          ou          
+
+`ou`
+
 python jogo-da-velha-colored.py
