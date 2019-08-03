@@ -5,7 +5,6 @@ __date__ = '02/2019'
 
 from os import system, name
 from time import sleep
-# from pdb import set_trace
 
 def clear_output():
     '''
