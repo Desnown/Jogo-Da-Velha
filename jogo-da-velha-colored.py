@@ -28,7 +28,7 @@ def welcome():
     ''' Função resonsável por dar as boas vindas aos players.
     '''
     cprint(f"""+----------------------------+
-| Bem Vindo ao Jogo da Velha |
+| Bem-Vinda(o) ao Jogo da Velha |
 +----------------------------+
 | Author: {__author__}            |
 | Date: {__date__}              |
