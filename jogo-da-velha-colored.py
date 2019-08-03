@@ -25,7 +25,7 @@ def clear_output():
 
 
 def welcome():
-    ''' Função resonsável por dar as boas vindas aos players.
+    ''' Função responsável por dar as boas vindas aos players.
     '''
     cprint(f"""+----------------------------+
 | Bem-Vinda(o) ao Jogo da Velha |
