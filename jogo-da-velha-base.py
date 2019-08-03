@@ -53,7 +53,7 @@ def player_input():
 
 def place_marker(tab,marker, position):
     '''
-    Função que "carimba" no lugar que o player pediu.
+    Função que "carimba" na posição que o player pediu.
     '''
 
     if tab[position-1] == ' ':
@@ -66,19 +66,19 @@ def win_check(tab, mark):
     ganhou a partida.
     '''
 
-    return ((tab[0] == tab[1] == tab[2] == mark)  or
+    return (# ->> Horizontal
+            (tab[0] == tab[1] == tab[2] == mark)  or
             (tab[3] == tab[4] == tab[5] == mark)  or
             (tab[6] == tab[7] == tab[8] == mark)  or
-            # ->> Horizontal
-
+            
+            # ->> Vertical
             (tab[0] == tab[3] == tab[6] == mark)  or
             (tab[1] == tab[4] == tab[7] == mark)  or
             (tab[2] == tab[5] == tab[8] == mark)  or
-            # ->> Vertical
-
+            
+            # ->> Diagonal
             (tab[0] == tab[4] == tab[8] == mark)  or
             (tab[2] == tab[4] == tab[6] == mark)
-            # ->> Diagonal
             )
 
 
@@ -91,7 +91,7 @@ def space_check(tab, position):
 
 
 def full_board_check(tab):
-    '''Diz se o tabuleiro(tab) foi ocupado'''
+    '''Diz se o tabuleiro(tab) está ocupado'''
     for i in range(0,10):
         if space_check(tab, i):
             return False
