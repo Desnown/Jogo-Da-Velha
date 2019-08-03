@@ -27,18 +27,18 @@ def clear_output():
 def welcome():
     ''' Função resonsável por dar as boas vindas aos players.
     '''
-    cprint(f"""+-----------------------------+
-| WELCOME TO THE TIC-TAC-TOE! |
-+-----------------------------+
-| Author: {__author__}             |
-| Date: {__date__}               |
-+-----------------------------+\n""", 'green', attrs=['bold'])
+    cprint(f"""+----------------------------+
+| Bem Vindo ao Jogo da Velha |
++----------------------------+
+| Author: {__author__}            |
+| Date: {__date__}              |
++----------------------------+\n""", 'green', attrs=['bold'])
 
 
 def rules():
     opcoes = colored('''\nVocês desejam ler as regras do jogo?''')+\
-        colored('\n1) SIM', color='green')+\
-        colored('\n2) NÃO', color='red')
+        colored('\n1) SIM', color='green', attrs=['bold'])+\
+        colored('\n2) NÃO', color='red', attrs=['bold'])
 
     rules = colored('''
 1) O tabuleiro é uma matriz de 3 linhas por 3 colunas.
@@ -199,9 +199,16 @@ def replay():
     #OBS: Obedecendo a PEP 8 de no máximo 79 caracteres de comprimento
     return [cprint(colored('Vocês desejam jogar novamente?\n') +
         colored('1) SIM\n', color='green', attrs=['bold']) +
-        colored('2) NÃO', color='red', attrs=['dark', 'bold'])),
+        colored('QUALQUER TECLA P/ NÃO', color='red', attrs=['dark', 'bold'])),
 
         input('>: '),clear_output()]
+
+
+def printing_exit():
+    '''Printa na tela que o jogo está sendo fechado.'''
+    cprint("SAINDO DO JOGO...", 'red', attrs=['bold'])
+    sleep(1)
+    clear_output()
 
 try:
     clear_output()
@@ -214,9 +221,7 @@ try:
 
 except KeyboardInterrupt:
     clear_output()
-    cprint("SAINDO DO JOGO...", 'red', attrs=['bold'])
-    sleep(2)
-    clear_output()
+    printing_exit()
     exit()
 
 rules()
@@ -260,9 +265,7 @@ while True:
 
         if replay()[1] != '1':
             clear_output()
-            cprint("SAINDO DO JOGO...", 'red', attrs=['bold'])
-            sleep(2)
-            clear_output()
+            printing_exit()
             break
 
         else:
@@ -273,7 +276,5 @@ while True:
             cprint('OBS: PLAYER GANHADOR É QUEM COMEÇA!', 'yellow', attrs=['bold'])
             sleep(3)
     except KeyboardInterrupt:
-        cprint("SAINDO DO JOGO...", 'red', attrs=['bold'])
-        sleep(2)
-        clear_output()
+        printing_exit()
         break

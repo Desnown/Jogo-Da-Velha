@@ -135,7 +135,7 @@ def replay():
     #OBS: Obedecendo a PEP 8 de no máximo 79 caracteres de comprimento
     return [print('''Vocês desejam jogar novamente?
 1) SIM
-2) NÃO'''),input('\n>: '),clear_output()]
+QUALQUER TECLA P/ NÃO'''),input('\n>: '),clear_output()]
 
 
 try:
