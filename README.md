@@ -8,8 +8,9 @@ Você tem 2 opções de jogo.
 `2 -> Jogo todo colorido e com algumas animações - jogo-da-velha-colored.py.`
 
 
+**Imagens do jogo:** https://github.com/Pabluu/Jogo-Da-Velha/wiki/Exemplos
 
-# Executar o jogo
+# Executando o jogo
 python3 jogo-da-velha-base.py
 
 `ou`
