@@ -27,12 +27,12 @@ def clear_output():
 def welcome():
     ''' Função responsável por dar as boas vindas aos players.
     '''
-    cprint(f"""+----------------------------+
+    cprint(f"""+-------------------------------+
 | Bem-Vinda(o) ao Jogo da Velha |
-+----------------------------+
-| Author: {__author__}            |
-| Date: {__date__}              |
-+----------------------------+\n""", 'green', attrs=['bold'])
++-------------------------------+
+| Author: {__author__}               |
+| Date: {__date__}                 |
++-------------------------------+\n""", 'green', attrs=['bold'])
 
 
 def rules():
@@ -177,8 +177,11 @@ def player_choice(tab, jog):
                     display_board(tabuleiro, jog)
                 else:
                     return pos
-        except Exception:
+        except ValueError:
                 cprint('\nSOMENTE NÚMEROS!!!', color='white')
+
+        else:
+            print("\nPosição fora do alcance.")
 
 
 def print_points(pontos_jogadores):

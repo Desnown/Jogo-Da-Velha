@@ -23,7 +23,7 @@ def display_board(tab=[' ']):
     '''
 
     if len(tab) != 9:
-        print("Só aceitamos 9 posições")
+        print("Só aceitamos posições de 1 a 9")
         exit()
 
     print(f'''  {tab[0]} | {tab[1]} | {tab[2]}  
@@ -114,6 +114,7 @@ def player_choice(tab, jog):
             else:
                 return pos
         else:
+            print("Posição fora do alcance.")
             continue
 
 
