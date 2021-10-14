@@ -1,12 +1,11 @@
 #! -*- coding: utf-8 -*-
-__author__ = 'Desnown'
+__author__ = 'Pablo'
 __date__ = '05/2019'
 
 
 from os import system, name
 from termcolor import colored, cprint
 from time import sleep
-from pdb import set_trace
 
 color = {'Player 1':'blue', 'Player 2':'magenta',
         'Unknown':'green', 'Velha':'red',
