@@ -1,5 +1,5 @@
 #! -*- coding: utf-8 -*-
-__author__ = 'Desnown'
+__author__ = 'Pablo Henrique'
 __date__ = '02/2019'
 
 
@@ -170,7 +170,7 @@ while True:
 
             if win_check(tabuleiro, player1_marker):
                 clear_output()
-                print(f"{player_1.upper()} GANHOU!!!")
+                print(f"{player_1.upper()} GANHOU!!!\n")
                 pontos[player_1]+=1
                 print_points(pontos)
                 display_board(tabuleiro)
